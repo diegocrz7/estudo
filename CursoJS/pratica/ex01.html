@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+</head>
+<style>
+    body{
+        background-color:rgb(36, 33, 33);
+        color: aliceblue;
+    }
+</style>
+<body>
+    <h1>Paises</h1>
+    Informe seu País: <input type="text" name="pais" id="pais">
+    <input type="button" value ="Informar" onclick="informar()">
+    <div id="res"></div>
+    <script>
+
+        function informar(){
+            var res = document.querySelector('div#res')
+            var p = String(pais.value)
+            
+
+            res.innerHTML = `<p> Seu pais atual é o <strong>${p}</strong> !`
+                if(p.toLowerCase() == 'brasil'){
+                    res.innerHTML += `<p> Você é <strong>Brasileiro!</strong></p>`
+                }
+                else{
+                    res.innerHTML += `<p>Você é <strong>estrangeiro!</strong></p>`
+                }
+
+        }
+    </script>
+</body>
+</html>
